@@ -131,7 +131,7 @@ def slack_call(account,sum_public,sum_private,cname_name_dict_public,cname_name_
 ##Main##
 
 def lambda_handler(event, context):
-   slack = slackweb.Slack(url=os.environ.get('ap_netsec_slack'))
+   slack = slackweb.Slack(url=os.environ.get('channel'))
    slack.notify(text="*Summary of Unused Route53 Check Results:*")
    slack.notify(text="==================================")
    
